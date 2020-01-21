@@ -1,2 +1,2 @@
 # findMyCar_server
-server per la geolocalizzazione 
+server per la geolocalizzazione (proprio cosi)
