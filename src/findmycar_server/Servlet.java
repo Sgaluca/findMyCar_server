@@ -5,10 +5,11 @@
  */
 package findmycar_server;
 import javax.servlet.*;
+import javax.servlet.http.HttpServlet;
 /**
  *
  * @author sgalu
  */
-public class Servlet  {
+public class Servlet extends HttpServlet{
     
 }

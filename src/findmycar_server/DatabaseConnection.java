@@ -7,7 +7,7 @@ package findmycar_server;
 
 import java.sql.*;
 
-public class dbConnection {
+public class DatabaseConnection {
 
     private Connection con;
     private String address = "192.168.1.21";
@@ -16,7 +16,7 @@ public class dbConnection {
     private String dbUserName = "user";
     private String dbPassword = "userpsw001";
 
-    public dbConnection() {
+    public DatabaseConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -24,7 +24,7 @@ public class dbConnection {
         }
     }
 
-    public dbConnection(String address, String port, String db, String dbUserName, String dbPassword) {
+    public DatabaseConnection(String address, String port, String db, String dbUserName, String dbPassword) {
         this.address = address;
         this.port = port;
         this.db = db;
