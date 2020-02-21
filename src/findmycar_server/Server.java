@@ -34,12 +34,15 @@ public class Server {
         try {
             serverSocket = new ServerSocket(ServerPort);
             System.out.println("Server avviato...");
+            System.out.println("pronto per la connessione");
+            
         } catch (IOException ex) {
             System.out.println("Errore crazione server");
             System.out.println(ex.getMessage());
         }
         try {
             client = serverSocket.accept();
+            System.out.println("Client connesso: " + client.toString());
         } catch (Exception e) {
             System.out.println("Errore connessione");
             System.out.println(e.getMessage());
@@ -48,8 +51,9 @@ public class Server {
         try {
             inputFromClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
             outputToClient = new PrintStream(client.getOutputStream());
-            System.out.println("pronto per la connessione");
+            
         } catch (IOException ex) {
+            
             System.out.println("Errore connessione");
             System.out.println(ex.getMessage());
 

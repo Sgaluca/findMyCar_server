@@ -30,6 +30,12 @@ public class DatabaseConnection {
         this.db = db;
         this.dbUserName = dbUserName;
         this.dbPassword = dbPassword;
+        
+            try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public Connection getCon() {
